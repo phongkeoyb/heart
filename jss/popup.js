@@ -66,10 +66,6 @@ function on() {
   one();
 }
 
-function showModal(){
-  $('.reveal-modal').css({visibility: 'visible'})
-}
-
 $(document).ready(function () {
   $("#k").hide();
   $("h1").click(function () {

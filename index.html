@@ -94,7 +94,7 @@
   onunload="s()">
 
   <audio id="player" autoplay loop>
-    <source src="./music/My_Everything.mp3" type="audio/mp3" />
+    <source src="./music/my_everything.mp3" type="audio/mp3" />
   </audio>
   <div id="bg"></div>
   <div id="myModal" class="reveal-modal large">
@@ -177,6 +177,9 @@
         return false;
       });
     });
+    function showModal() {
+      $('.reveal-modal').css({ visibility: 'visible' })
+    }
   </script>
 </body>
 
