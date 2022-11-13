@@ -91,7 +91,7 @@
   onload="popup('<p>Này bạn gì ơi, cho mình hỏi cái này, bạn phải trả lời thật lòng đó. Trả lời không thật lòng là không xong với tớ đâu 😈😈😈</p></br>'); on()"
   onunload="s()">
 
-  <audio autoplay loop>
+  <audio id="player" autoplay loop>
     <source src="./music/my_everything.mp3" type="audio/mp3" />
   </audio>
   <div id="bg"></div>
@@ -124,7 +124,8 @@
   <script language="javascript">
     $(document).ready(function () {
       $('#msb-nt').click(function () {
-        $('.music').slideToggle("fast");
+        var player = document.getElementById('player');
+        player.setAttribute('autoplay', 'autoplay');
         $('#bg').css('display', 'none');
       });
     });
