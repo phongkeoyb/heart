@@ -28,8 +28,6 @@
       // if user resize the window, call the same function again
       // to make sure the overlay fills the screen and dialogbox aligned to center	
       $(window).resize(function () {
-
-
         if (!$('#dialog-box').is(':hidden')) popup();
       });
 
@@ -93,7 +91,7 @@
   onload="popup('<p>Này bạn gì ơi, cho mình hỏi cái này, bạn phải trả lời thật lòng đó. Trả lời không thật lòng là không xong với tớ đâu 😈😈😈</p></br>'); on()"
   onunload="s()">
 
-  <audio id="player" autoplay loop>
+  <audio autoplay loop>
     <source src="./music/my_everything.mp3" type="audio/mp3" />
   </audio>
   <div id="bg"></div>
@@ -106,7 +104,7 @@
       <p>CẬU CÓ YÊU TỚ KHUM ? <img src="http://website1gia.com/files/assets/anh2.png" /> Nhập câu trả lời xuống bên
         dưới và bấm GỬI ĐI</br></br></p>
       <form id="f" name="f">
-        <input id="form" name="txt" type="text" />
+        <input id="form" name="txt" type="text" placeholder="Nhập ở đây nè" />
 
         <div>
           <input id="gui" onclick="Yeu();" type="button" value="Gửi đi" />
@@ -121,7 +119,7 @@
     <div id="divResult2"></div>
 
     <div id="divResult3"></div>
-    <a class="close-reveal-modal">&#215;</a>
+    <a class="close-reveal-modal" onclick="hideModal()">&#215;</a>
   </div>
   <script language="javascript">
     $(document).ready(function () {
@@ -152,7 +150,7 @@
       Cậu MÀ TẮT CÁI NÀY ĐỒNG NGHĨA Cậu SẼ LÀM NGƯỜI
       YÊU CỦA
       TỚ. SUY NGHĨ ĐI !</br>
-      CÓ YÊU TỚ KHÔNG ? TRẢ LỜI NHANH Bạn! ♥ =))
+      CÓ YÊU TỚ KHÔNG ? TRẢ LỜI NHANH nha Bạn! ♥ =))
     </h2>
 
 
@@ -179,6 +177,9 @@
     });
     function showModal() {
       $('.reveal-modal').css({ visibility: 'visible' })
+    }
+    function hideModal() {
+      $('.reveal-modal').css({ visibility: 'hidden' })
     }
   </script>
 </body>
